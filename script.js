@@ -91,22 +91,14 @@ cityName = $('.button').click(function(event) {
                             for (let i = 0; i < dayList.length; i++) {
                                 var weather5day = dayList[i].weather[0].main
                                 var temp5day = dayList[i].main.temp
-                                // console.log(temp5day)
-                                // console.log(dayList[i].wind.speed)
                                 var wind5day = dayList[i].wind.speed
-                                // console.log(wind5day)
-                                // console.log(dayList[i].main.humidity)
                                 var humidity5day = dayList[i].main.humidity
-                                // console.log(humidity5day)
                                 var icon5day = dayList[i].weather[0].icon
                                 var dateUnix5 = dayList[i].dt_txt
                                 var year = dateUnix5.slice(0,4);
                                 var month = dateUnix5.slice(5,7);
                                 var day = dateUnix5.slice(8,10);
                                 var date5day = month + '/' + day + '/' + year;
-                                // console.log(dateUnix)
-                                // console.log(dayList[i])
-                                // <img src=`https://openweathermap.org/img/wn/${icon5day}@2x.png`>
                                 var card = $("<card>")
                                 .addClass('card col-2 bg-info card5day')     
                                 $('#5Day').append(card)
