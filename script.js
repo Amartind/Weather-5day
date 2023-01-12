@@ -85,20 +85,11 @@ cityName = $('.button').click(function(event) {
                             return response5day.json();
                         })
                         .then(function (data5day) {
-                            // console.log(data5day);
-                            // console.log(data5day.list)
-                            // console.log(data5day.city.name)
-                            // var city5day = data5day.city.name
-
 //Seperate results into 5 different days in a array
                             var dayList = [0,8,16,24,32].map(i => data5day.list[i])
-                            // console.log(dayList)
 //Append results to page
                             for (let i = 0; i < dayList.length; i++) {
-                                // console.log(dayList[i].weather[0].main)
                                 var weather5day = dayList[i].weather[0].main
-                                // console.log(weather5day)
-                                // console.log(dayList[i].main.temp)
                                 var temp5day = dayList[i].main.temp
                                 // console.log(temp5day)
                                 // console.log(dayList[i].wind.speed)
