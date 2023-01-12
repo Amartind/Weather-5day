@@ -47,18 +47,10 @@ cityName = $('.button').click(function(event) {
             currentUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
                 fetch(currentUrl)
                 .then (function(responseCurrent){
-                    console.log(responseCurrent);
                     return responseCurrent.json();
                 })
                 .then (function (dataCurrent){
-                    console.log(dataCurrent)
-                    console.log(dataCurrent.name)
                     var time = dayjs().format(' M/DD/YYYY')
-                    console.log(time)
-                    console.log(dataCurrent.main.temp)    
-                    console.log(dataCurrent.main.humidity)
-                    console.log(dataCurrent.wind.speed)
-
 //append results for current weather
                     var cityCInput = $("<div>")
                     cityCInput.addClass("row citycurrent")
