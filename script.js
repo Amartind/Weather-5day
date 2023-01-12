@@ -36,32 +36,28 @@ cityName = $('.button').click(function(event) {
         var geocodeUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${citySearched}&limit=${limit}&appid=${apiKey}`
         fetch(geocodeUrl)
         .then(function (response) {
-            // console.log(response);
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
             var lonSearched = data[0].lon
             var latSearched = data[0].lat
-            // console.log(latSearched)
-            // console.log(lonSearched)
             lon = lonSearched
             lat = latSearched
 // get the current weather for found lon and lat coords
             currentUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
                 fetch(currentUrl)
                 .then (function(responseCurrent){
-                    // console.log(responseCurrent);
+                    console.log(responseCurrent);
                     return responseCurrent.json();
                 })
                 .then (function (dataCurrent){
-                    // console.log(dataCurrent)
-                    // console.log(dataCurrent.name)
+                    console.log(dataCurrent)
+                    console.log(dataCurrent.name)
                     var time = dayjs().format(' M/DD/YYYY')
-                    // console.log(time)
-                    // console.log(dataCurrent.main.temp)    
-                    // console.log(dataCurrent.main.humidity)
-                    // console.log(dataCurrent.wind.speed)
+                    console.log(time)
+                    console.log(dataCurrent.main.temp)    
+                    console.log(dataCurrent.main.humidity)
+                    console.log(dataCurrent.wind.speed)
 
 //append results for current weather
                     var cityCInput = $("<div>")
