@@ -1,3 +1,14 @@
-.card {
-    height: 10vh;
+.cardcurrent{
+    height :  275px;
+
 }
+
+.card5day {
+    height: 275px;
+}
+
+.bigboi {
+    max-width: 100px;
+    max-height: 100px;
+}
+

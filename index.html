@@ -15,30 +15,32 @@
 </head>
 <body>
     <section class="container">
-        <header class="row">
-            <h2>Weather Dashboard</h2>
+        <header class="row ">
+            <h2 class="bg-primary align-content-center">Weather Dashboard</h2>
         </header>
+        <br>
         <div class=" row">
             <div class="col-3">
                 <h2>Search for a City:</h2>
                 <input type="text" class="form-input w-100" id="city-input" name="city-input" placeholder="Enter city name" />
-      
+                <br>
+                <input class="button btn-primary" type="button" value="Search">
+                <br>
+                <div id="citylist" class=" container"></div>
             </div>
             <div class="container col-9">
-                <aside class="row"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illo libero repellendus suscipit minima sint commodi doloribus. Consectetur laboriosam     sint illo commodi rerum assumenda iste nemo itaque officiis exercitationem. Vero.   
-                </aside>
+                <card class="row card cardcurrent">
+
+                </card>
                 <br>
-                <div class="row">5 Day forecast:
-                    <card class="col-2 card">a</card>
-                    <card class="col-2 card">b</card>
-                    <card class="col-2 card">c</card>
-                    <card class="col-2 card">d</card>
-                    <card class="col-2 card">e</card>
+                <div class="row">5 Day Forecast:</div>
+                <div class="row justify-content-evenly" id = "5Day">
+                   
                 </div>
             </div>
         </div>
     </section>
-
+    
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
